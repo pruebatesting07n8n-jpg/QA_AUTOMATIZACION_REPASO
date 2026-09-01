@@ -18,3 +18,14 @@ def driver():
     yield driver
     #driver.quit()
     print(f"Terminando driver automatizado: {driver}")
+# ==============================================================================
+# NUEVO: FIXTURE AGREGADO PARA SOLUCIONAR EL ERROR DE CONEXIÓN INDIRECTA
+# ==============================================================================
+@pytest.fixture
+def login_data(request):
+    """
+    Recibe dinámicamente los parámetros desde el decorador
+    @pytest.mark.parametrize(..., indirect=True) en el archivo de prueba.
+    """
+    # request.param contendrá la tupla de datos enviada desde el test
+    return request.param

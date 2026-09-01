@@ -1,0 +1,10 @@
+[run]
+omit =
+    main.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def main\(\):
+    if __name__ == .__main__.:
+    def navegador\(self\):

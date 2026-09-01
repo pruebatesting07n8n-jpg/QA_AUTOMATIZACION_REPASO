@@ -12,4 +12,4 @@ class OperacionesMatematicas:
         return a//b
 
     def par(self,numero):
-        return numero % 2 == 1
+        return numero % 2 == 0

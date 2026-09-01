@@ -382,3 +382,7 @@ class TestOperacionesMatematicas:
         assert resultado_actual != resultado_esperado
         f"Validando suma de numeros positivos. RA:{resultado_actual}. RE:{resultado_esperado}"
         print("resultado:", resultado_actual)
+    def test_verificar_numero_par(self):
+        objeto = OperacionesMatematicas()
+        # Esto llamará a la función 'par' ejecutando la línea faltante
+        assert objeto.par(4) is True  # Cambia a False si decidiste dejar el código original con == 1

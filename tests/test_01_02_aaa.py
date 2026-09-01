@@ -7,7 +7,7 @@ class TestAAA02:
          "test_name, a, b, re", [
     ("numeros_positivos", 3,4,7),
     ("numeros_negativos", -1, -1, -2),
-    ("numeros_negativos", -1, +1, -2)
+    ("numeros_negativos", -1, +1, 0)
 
 ]
      )
