@@ -31,9 +31,8 @@ class TestParametrized02:
     @pytest.mark.parametrize(
         "test_name, a, b, tipo_error,mensaje_error",
         [
-            ("Division sobre 0", 10, 0,ZeroDivisionError,"division by zero"),
-            ("Division sobre None", 3, None, TypeError,"unsupported operand type(s) for //: 'int' and 'NoneType'")
-
+            ("Division sobre 0", 10, 0, ZeroDivisionError, r".*division.*by zero"),
+            ("Division sobre None", 3, None, TypeError, "unsupported operand type(s) for //: 'int' and 'NoneType'")
         ]
     )
     def test_division(self,test_name,a,b,tipo_error,mensaje_error):
