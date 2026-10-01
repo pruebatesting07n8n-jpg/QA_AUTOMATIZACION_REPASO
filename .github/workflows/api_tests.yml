@@ -9,13 +9,16 @@ on:
 jobs:
   test_suite:
     runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://jsonplaceholder.typicode.com
+      TIMEOUT: "10"
 
     steps:
     - name: Clonar código del repositorio
       uses: actions/checkout@v4
 
     - name: Configurar entorno Python 3.11
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
