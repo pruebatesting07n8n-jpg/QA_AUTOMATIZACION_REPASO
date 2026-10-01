@@ -35,11 +35,9 @@ class TestParametrized02:
             ("Division sobre None", 3, None, TypeError, "unsupported operand type(s) for //: 'int' and 'NoneType'")
         ]
     )
-    def test_division(self,test_name,a,b,tipo_error,mensaje_error):
+    def test_division(self, test_name, a, b, tipo_error, mensaje_error):
         print(f"Test {test_name}")
         op = OperacionesMatematicas()
-        #raises no servira para ver lo de excepciones
-        #regex es una expresion regular
-        with pytest.raises(tipo_error,match=re.escape(mensaje_error)):
-            op.division(a,b)
-
+        # Se elimina re.escape() para permitir la expresión regular en match
+        with pytest.raises(tipo_error, match=mensaje_error):
+            op.division(a, b)
